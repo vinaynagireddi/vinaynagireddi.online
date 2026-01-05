@@ -17,16 +17,16 @@ body {
 header {
     background-color: #0a3d62;
     color: white;
-    padding: 40px 20px;
+    padding: 50px 20px;
     text-align: center;
 }
 
 header h1 {
-    font-size: 36px;
+    font-size: 38px;
 }
 
 header p {
-    font-size: 18px;
+    font-size: 20px;
     margin-top: 10px;
 }
 
@@ -37,7 +37,7 @@ header p {
     padding: 25px;
     max-width: 900px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
 
 .container h2 {
@@ -49,16 +49,15 @@ header p {
 .skills {
     display: flex;
     flex-wrap: wrap;
-    /* important for mobile */
     list-style: none;
 }
 
 .skills li {
     background: #0a3d62;
     color: white;
-    padding: 8px 15px;
+    padding: 10px 18px;
     margin: 5px;
-    border-radius: 20px;
+    border-radius: 25px;
     font-size: 14px;
 }
 
@@ -69,13 +68,13 @@ header p {
 
 .project h3 {
     color: #333;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 /* ================== FOOTER ================== */
 footer {
     text-align: center;
-    padding: 15px;
+    padding: 18px;
     background: #0a3d62;
     color: white;
     margin-top: 40px;
@@ -90,50 +89,67 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ================== RESPONSIVE MOBILE FIX ================== */
-@media (max-width: 768px) {
+/* ================== MEDIA QUERIES ================== */
 
-    /* Header smaller */
+/* Tablet / small laptop */
+@media (max-width: 992px) {
     header h1 {
-        font-size: 26px;
+        font-size: 32px;
     }
 
     header p {
-        font-size: 14px;
+        font-size: 18px;
     }
 
-    /* Reduce container margins and padding */
+    .container {
+        max-width: 700px;
+        padding: 20px;
+    }
+
+    .skills li {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+
+    .project h3 {
+        font-size: 17px;
+    }
+}
+
+/* Mobile / small screens */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+
     .container {
         margin: 15px;
         padding: 18px;
     }
 
-    /* Skills smaller and wrap nicely */
     .skills li {
         font-size: 12px;
         padding: 6px 10px;
     }
 
-    /* Project titles smaller */
     .project h3 {
         font-size: 16px;
     }
 
-    /* Footer smaller text */
     footer {
-        font-size: 12px;
-        padding: 12px;
+        font-size: 13px;
+        padding: 14px;
     }
 }
 
-/* ================== EXTRA RESPONSIVE IMPROVEMENTS ================== */
+/* Very small mobile */
 @media (max-width: 480px) {
     header {
         padding: 25px 10px;
-    }
-
-    .container {
-        padding: 15px;
     }
 
     header h1 {
@@ -142,6 +158,10 @@ a:hover {
 
     header p {
         font-size: 12px;
+    }
+
+    .container {
+        padding: 15px;
     }
 
     .skills li {
